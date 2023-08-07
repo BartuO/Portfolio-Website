@@ -440,4 +440,83 @@ img-cont {
 }
 .projects-text span {
   color: rgb(97, 69, 255);
+}
+
+proj-p {
+  padding: 2rem 0;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+}
+.projects .project-unit {
+  position: relative;
+  border-radius: 15px;
+}
+.projects .project-unit img {
+  border-radius: 15px;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px;
+}
+.projects .project-unit .hover-items {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(97, 69, 255);
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease-in-out;
+}
+.projects .project-unit .hover-items h3 {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+.projects .project-unit .hover-items .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects .project-unit .hover-items .icons .icon {
+  background-color: var(--color-white);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.projects .project-unit .hover-items .icons .icon i {
+  font-size: 1.5rem;
+  color: rgb(97, 69, 255);
+  margin: 0 1rem;
+}
+.projects .project-unit .hover-items .icons .icon:hover {
+  background-color: var(--color-black);
+}
+.projects .project-unit .hover-items .icons .icon:hover i {
+  color: var(--color-white);
+}
+
+.project-unit:hover .hover-items {
+  opacity: 1;
+  transform: scale(1);
 }/*# sourceMappingURL=style.css.map */
