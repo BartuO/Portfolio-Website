@@ -72,7 +72,7 @@ header{
 .sec3{
     display: none;
     transform: translateY(0) scale(1);
-    background-color: greenyellow;
+    background-color: rgb(72, 153, 128);
 }
 .sec4{
     display: none;
@@ -337,6 +337,7 @@ header{
             height:100%;
             background-color: var(--color-secondary);
             transform: translateX(0);
+            
         }
     }
     
@@ -351,7 +352,7 @@ header{
 
 }
 
-.about-text{
+.about-text {
     position: relative;
     text-align: center;
     text-transform: uppercase;
@@ -458,6 +459,17 @@ img-cont{
 }
 
 
+.projects-text{
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px var(--color-black);
+    span{
+        color: rgb(97, 69, 255);
+    }
+}
 
 
   
