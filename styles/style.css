@@ -78,7 +78,7 @@ header {
 .sec4 {
   display: none;
   transform: translateY(0) scale(1);
-  background-color: grey;
+  background-color: rgb(109, 29, 106);
 }
 
 .sec5 {
@@ -519,4 +519,16 @@ proj-p {
 .project-unit:hover .hover-items {
   opacity: 1;
   transform: scale(1);
+}
+
+.classes-text {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px var(--color-black);
+}
+.classes-text span {
+  color: rgb(255, 251, 0);
 }/*# sourceMappingURL=style.css.map */
