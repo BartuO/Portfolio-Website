@@ -137,6 +137,10 @@ header {
   pointer-events: none;
 }
 
+.black-and-white {
+  filter: grayscale(100%);
+}
+
 /*Header*/
 .header-content {
   display: grid;
@@ -430,24 +434,6 @@ img-cont {
   transition: all 0.4s ease-in-out;
 }
 
-.projects-text {
-  position: relative;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 4rem;
-  font-weight: 700;
-  text-shadow: 2px 2px 4px var(--color-black);
-}
-.projects-text span {
-  color: rgb(97, 69, 255);
-}
-
-proj-p {
-  padding: 2rem 0;
-  margin-top: 1rem;
-  text-align: center;
-}
-
 .courses {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -536,4 +522,74 @@ proj-p {
 }
 .courses-text span {
   color: rgb(255, 251, 0);
+}
+
+.projects-text {
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 4rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px var(--color-black);
+}
+.projects-text span {
+  color: rgb(97, 69, 255);
+}
+
+.proj-p {
+  padding: 2rem 0;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.projects {
+  position: relative;
+  right: 2.7rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  margin-top: 3rem;
+}
+.projects .project-unit {
+  position: relative;
+  background-color: rgba(33, 96, 84, 0.6);
+  border-radius: 5px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s ease-in-out;
+}
+.projects .project-unit:hover {
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.3);
+  transform: translateY(-5px);
+  transition: all 0.4s ease-in-out;
+}
+.projects .project-unit:hover img {
+  transform: scale(1.1);
+  box-shadow: 1px 4px 20px rgba(0, 0, 0, 0.8);
+}
+.projects .project-unit img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  transition: all 0.4s ease-in-out;
+}
+.projects .project-unit .proj-unit-text {
+  margin-top: -7px;
+  padding: 1.2rem;
+}
+.projects .project-unit .proj-unit-text h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+.projects .project-unit .proj-unit-text h4:hover {
+  color: rgb(97, 69, 255);
+}
+.projects .project-unit .proj-unit-text p {
+  color: var(--color-white);
+  line-height: 1.1em;
+  padding-bottom: 0.5rem;
 }/*# sourceMappingURL=style.css.map */
