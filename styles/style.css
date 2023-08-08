@@ -448,28 +448,29 @@ proj-p {
   text-align: center;
 }
 
-.projects {
+.courses {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-top: 3rem;
 }
-.projects .project-unit {
+.courses .course-unit {
   position: relative;
   border-radius: 15px;
-}
-.projects .project-unit img {
-  border-radius: 15px;
   width: 100%;
-  height: 300px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-radius: 15px;
+  height: 150px;
 }
-.projects .project-unit .hover-items {
+.courses .course-unit .course-info {
+  background-color: rgb(137, 81, 135);
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  padding: 1rem;
+}
+.courses .course-unit .hover-items {
   width: 100%;
   height: 100%;
-  background-color: rgb(97, 69, 255);
+  background-color: rgb(255, 251, 0);
   position: absolute;
   left: 0;
   top: 0;
@@ -482,21 +483,24 @@ proj-p {
   transform: scale(0);
   transition: all 0.4s ease-in-out;
 }
-.projects .project-unit .hover-items h3 {
+.courses .course-unit .hover-items h3 {
   font-size: 1.5rem;
-  color: var(--color-white);
-  margin-bottom: 1.5rem;
+  color: rgb(109, 29, 106);
 }
-.projects .project-unit .hover-items .icons {
+.courses .course-unit .hover-items h5 {
+  font-size: 1rem;
+  color: rgb(109, 29, 106);
+}
+.courses .course-unit .hover-items .hover-info {
+  position: relative;
+  bottom: 20%;
+}
+.courses .course-unit .hover-items .icons {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.projects .project-unit .hover-items .icons .icon {
-  background-color: var(--color-white);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
+.courses .course-unit .hover-items .icons .icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -504,24 +508,25 @@ proj-p {
   cursor: pointer;
   transition: all 0.4s ease-in-out;
 }
-.projects .project-unit .hover-items .icons .icon i {
-  font-size: 1.5rem;
-  color: rgb(97, 69, 255);
+.courses .course-unit .hover-items .icons .icon i {
+  font-size: 3.5rem;
+  color: rgb(109, 29, 106);
   margin: 0 1rem;
 }
-.projects .project-unit .hover-items .icons .icon:hover {
-  background-color: var(--color-black);
+.courses .course-unit .hover-items .icons .icon:hover {
+  transition: all 0.4s ease-in-out;
 }
-.projects .project-unit .hover-items .icons .icon:hover i {
-  color: var(--color-white);
+.courses .course-unit .hover-items .icons .icon:hover i {
+  color: rgb(161, 74, 159);
+  transition: all 0.4s ease-in-out;
 }
 
-.project-unit:hover .hover-items {
+.course-unit:hover .hover-items {
   opacity: 1;
   transform: scale(1);
 }
 
-.classes-text {
+.courses-text {
   position: relative;
   text-align: center;
   text-transform: uppercase;
@@ -529,6 +534,6 @@ proj-p {
   font-weight: 700;
   text-shadow: 2px 2px 4px var(--color-black);
 }
-.classes-text span {
+.courses-text span {
   color: rgb(255, 251, 0);
 }/*# sourceMappingURL=style.css.map */
