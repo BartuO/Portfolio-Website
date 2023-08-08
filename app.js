@@ -77,6 +77,54 @@ function triangleHover(){
     }
 }
 
+
+function toggleBlackAndWhite() {
+    const elements = document.querySelectorAll('body *');
+
+    elements.forEach(element => {
+      element.classList.toggle('black-and-white');
+    });
+  }
+
+  function rotateUpsideDown() {
+    const triangle = document.querySelector('.big-triangle');
+    if(triangle.classList.contains("upside-down")){
+        triangle.classList.add("not-upside-down");
+        setTimeout(function() {
+            triangle.classList.remove("not-upside-down");
+            triangle.classList.remove("upside-down");
+          }, 1100);
+    }else{
+        triangle.classList.add('upside-down');
+    }
+
+  }
+
+  
+
+
+  function blackandwhiteButton(){
+    const btn = document.querySelector(".black-and-white-btn");
+
+    function clickHandler(){
+        toggleBlackAndWhite();
+        rotateUpsideDown();
+        
+        btn.removeEventListener("click", clickHandler);
+        
+        setTimeout(function(){
+            btn.addEventListener("click", clickHandler);
+        }, 1200);
+
+
+    }
+
+    btn.addEventListener("click", clickHandler);
+
+
+  }
+
+blackandwhiteButton();
 triangleHover();
 triangleCycle();
 PageTransitions();

@@ -152,11 +152,36 @@ header{
     justify-content: center;
     align-items: center;
     box-shadow: 0 3px 15px rgba(0,0,0,.3);
-    transition: all .5s ease-in-out;
+    transition: all .2s ease-in-out;
     &:active{
-        transform: translateY(-5px);
+        transform: translateY(-2px);
     }
 
+}
+
+.upside-down {
+
+    transform: rotate(180deg);
+    transition: transform 1s ease-in-out; /* Add smooth transition */
+}
+
+.not-upside-down{
+    transform: rotate(360deg);
+    transition: transform 1s ease-in-out;
+}
+
+.colored{
+
+    transition: all .5s ease-in-out;
+    filter: grayscale(0%) !important;
+    background-color: rgb(4, 255, 0);
+    
+    i{
+        filter: grayscale(0%) !important;
+        
+        color:rgb(120, 82, 246);
+        transition: all .5s ease-in-out;
+    }
 }
 
 
@@ -180,7 +205,7 @@ header{
 
 .big-triangle {
     position: relative;
-    left: 50px;
+    left: 85px;
     width: 0;
     height: 0;
     border-left: 300px solid transparent;
@@ -190,6 +215,7 @@ header{
 }
 
 .big-triangle::before {
+
     content: "";
     position: absolute;
     top: 30px; /* Adjust the offset to control the shadow's position */
@@ -427,9 +453,9 @@ img-cont{
   }
 
 .github{
-    position:absolute;
+    position:relative;
     left: 20rem;
-    bottom: 1.6rem;
+    bottom: 1rem;
     width: 55px;
     height: 55px;
     font-size: 1.2rem;
@@ -459,9 +485,9 @@ img-cont{
     width: 55px;
     height: 55px;
     font-size: 1.2rem;
-    position:absolute;
+    position:relative;
     left: 27rem;
-    bottom: 1.6rem;
+    bottom: 4.4rem;
     display:flex;
     align-items: center;
     justify-content: center;
