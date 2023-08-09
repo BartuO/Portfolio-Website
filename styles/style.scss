@@ -59,34 +59,48 @@ header{
 }
 
 .sec1{
-    display: none;
+    
     transform: translateY(0) scale(1);
     background-color: slateblue;
 }
 
 .sec2{
-    display: none;
+    
     transform: translateY(0) scale(1);
     background-color: rgb(44, 42, 111);
 }
 .sec3{
-    display: none;
+    
     transform: translateY(0) scale(1);
     background-color: rgb(72, 153, 128);
 }
 .sec4{
-    display: none;
+    
     transform: translateY(0) scale(1);
     background-color: rgb(109, 29, 106);
 }
 
 .sec5{
-    display: none;
+    
     transform: translateY(0) scale(1);
     background-color: rgb(6, 98, 163);
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    
+    background-color:#7da5c5;
+    border-radius: 5px;
+  }
 
+  
+  ::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: #f1f1f1;
+  }
 
 .active{
     display: block;
