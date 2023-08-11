@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0;
     padding: 0;
@@ -50,7 +52,7 @@
     --color-grey-5: #a2a4a7;
     --color-grey-6: #e0e2e2;
     --color--scrollbar: rgb(162, 153, 218);
-    --color--about--icons--bg--hover: rgb(199, 100, 219);
+    --color--about--icons--bg--hover: rgb(200, 194, 238);
     --color--course-bg: rgb(76, 47, 109);
     --color--course-hover: rgb(116, 209, 194); 
     --color--course-hover-info: rgb(154, 126, 185);
@@ -418,11 +420,17 @@ header{
         z-index: -1;
     }
     &:hover{
+        color: var(--color-primary);
+        i{
+            color: var(--color-primary);
+        }
+
         &::before{
             width: 100%;
             height:100%;
             background-color: var(--color-secondary);
             transform: translateX(0);
+            
             
         }
     }
@@ -678,12 +686,13 @@ img-cont{
 
 
 .projects{
-    position:relative;
-    right: 2.7rem;
+
     display:grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
     margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
     .project-unit{
         position: relative;
         background-color: var(--color--projects--bg);
@@ -835,5 +844,8 @@ img-cont{
     background-color: #ccc;
     cursor: not-allowed;
 }
+
+
+@import "./_media.scss";
 
 
