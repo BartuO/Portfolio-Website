@@ -1,6 +1,5 @@
 const sections = document.querySelectorAll(".section");
-const sectionButtons = document.querySelectorAll(".controls");
-const sectionButton = document.querySelectorAll(".control");
+const sectionButtons = document.querySelectorAll(".control");
 const allSections = document.querySelector(".main-content");
 const triangles = document.querySelectorAll(".tri");
 const namespan = document.querySelector(".name");
@@ -22,21 +21,58 @@ const colorCodes = [
   
   
 
-function PageTransitions(){
-    for(let i = 0; i < sectionButton.length; i++){
-        sectionButton[i].addEventListener("click", (e) =>{
-            let currentBtn = document.querySelectorAll(".active-btn");
-            currentBtn[0].className = currentBtn[0].className.replace("active-btn", " ");
-            e.target.className += " active-btn";
-            sections.forEach((section) => {section.classList.remove("active")});
-            const element = document.getElementById(e.target.dataset.id);
-            element.classList.add("active");
+function pageTransitions(){
+    sectionButtons.forEach(button => {
+        button.addEventListener("click", function(){
+            const sectionId = this.getAttribute("data-id");
+            const section = document.getElementById(sectionId);
 
+            if (section) {
+
+                
+                section.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
         })
-    }
-
-
+    })
 }
+
+
+function navButtons() {
+    window.addEventListener("scroll", () => {
+        const scrollPosition = window.scrollY;
+
+        sections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            const sectionTop = section.offsetTop - 250;
+            const sectionBot = section.offsetTop + rect.height - 250;
+
+
+
+            if (scrollPosition >= sectionTop && scrollPosition <= sectionBot) {
+ 
+
+                const activeButton = document.querySelector(".active-btn");
+                const newActiveButton = document.querySelector(`[data-id="${section.id}"]`);
+
+
+                if (activeButton.getAttribute("data-id") !== newActiveButton.getAttribute("data-id")) {
+                    activeButton.classList.remove("active-btn");
+                    newActiveButton.classList.add("active-btn");
+                }
+            }
+        });
+    });
+}
+
+
+
+
+
+
+
+
 
 
 let triangleIndex = 0;
@@ -84,21 +120,22 @@ function toggleBlackAndWhite() {
     elements.forEach(element => {
       element.classList.toggle('black-and-white');
     });
-  }
+}
 
-  function rotateUpsideDown() {
+function rotateUpsideDown() {
     const triangle = document.querySelector('.big-triangle');
     if(triangle.classList.contains("upside-down")){
         triangle.classList.add("not-upside-down");
-        setTimeout(function() {
-            triangle.classList.remove("not-upside-down");
-            triangle.classList.remove("upside-down");
-          }, 1100);
+        triangle.classList.remove("upside-down");
+
     }else{
         triangle.classList.add('upside-down');
+        triangle.classList.remove("not-upside-down");
     }
 
   }
+
+
 
   
 
@@ -106,20 +143,12 @@ function toggleBlackAndWhite() {
   function blackandwhiteButton(){
     const btn = document.querySelector(".black-and-white-btn");
 
-    function clickHandler(){
+
+
+    btn.addEventListener("click", () =>{
         toggleBlackAndWhite();
         rotateUpsideDown();
-        
-        btn.removeEventListener("click", clickHandler);
-        
-        setTimeout(function(){
-            btn.addEventListener("click", clickHandler);
-        }, 1200);
-
-
-    }
-
-    btn.addEventListener("click", clickHandler);
+    });
 
 
   }
@@ -127,4 +156,5 @@ function toggleBlackAndWhite() {
 blackandwhiteButton();
 triangleHover();
 triangleCycle();
-PageTransitions();
+pageTransitions();
+navButtons();

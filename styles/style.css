@@ -59,27 +59,27 @@ header {
 
 .sec1 {
   transform: translateY(0) scale(1);
-  background-color: slateblue;
+  background-color: var(--color-primary);
 }
 
 .sec2 {
   transform: translateY(0) scale(1);
-  background-color: rgb(44, 42, 111);
+  background-color: var(--color-primary);
 }
 
 .sec3 {
   transform: translateY(0) scale(1);
-  background-color: rgb(72, 153, 128);
+  background-color: var(--color-primary);
 }
 
 .sec4 {
   transform: translateY(0) scale(1);
-  background-color: rgb(109, 29, 106);
+  background-color: var(--color-primary);
 }
 
 .sec5 {
   transform: translateY(0) scale(1);
-  background-color: rgb(6, 98, 163);
+  background-color: var(--color-primary);
 }
 
 ::-webkit-scrollbar {
@@ -98,15 +98,6 @@ header {
 
 .active {
   display: block;
-  animation: scaleAnim 1s ease-in-out;
-}
-@keyframes scaleAnim {
-  0% {
-    transform: translateY(-100%) scaleY(0);
-  }
-  100% {
-    transoform: translateY(0%) scaleY(1);
-  }
 }
 
 .controls {
@@ -171,7 +162,7 @@ header {
 }
 
 .not-upside-down {
-  transform: rotate(360deg);
+  transform: rotate(0deg);
   transition: transform 1s ease-in-out;
 }
 
