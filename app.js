@@ -67,6 +67,17 @@ function navButtons() {
 }
 
 
+function toggleTheme(){
+    const themeButton = document.querySelector(".theme-btn");
+    themeButton.addEventListener("click", () => {
+        let element = document.body;
+        element.classList.toggle("light-mode");
+        rotateUpsideDown();
+    })
+
+   
+}
+
 
 
 
@@ -140,20 +151,9 @@ function rotateUpsideDown() {
   
 
 
-  function blackandwhiteButton(){
-    const btn = document.querySelector(".black-and-white-btn");
+ 
 
-
-
-    btn.addEventListener("click", () =>{
-        toggleBlackAndWhite();
-        rotateUpsideDown();
-    });
-
-
-  }
-
-blackandwhiteButton();
+toggleTheme();
 triangleHover();
 triangleCycle();
 pageTransitions();

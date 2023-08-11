@@ -17,8 +17,52 @@
   --color-grey-4: #454e56;
   --color-grey-5: #2a2e35;
   --color-grey-6: #12181b;
+  --color--scrollbar: #31374d;
+  --color--about--icons--bg--hover: rgb(44, 42, 111);
+  --color--course-bg: rgb(137, 81, 135);
+  --color--course-hover: rgb(255, 251, 0);
+  --color--course-hover-info: rgb(109, 29, 106);
+  --color--course--hover--icon: rgb(161, 74, 159);
+  --color--course--info: #ffffff;
+  --color--projects--title: rgb(120, 82, 246);
+  --color--projects--bg: rgba(33, 96, 84, 0.6);
+  --color--projects--hover: rgb(97, 69, 255);
+  --color--projects--h4: rgb(97, 69, 255);
+  --color--contact--input: rgb(15, 78, 122);
+  --color--contact--ph: rgb(6, 98, 163);
+  --color--contact--title: rgb(142, 40, 101);
+  --color--contact--submit--hover: rgb(43, 130, 192);
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0,0,0.3);
+}
+
+.light-mode {
+  --color-primary: rgb(200, 194, 238);
+  --color-secondary: rgb(255, 255, 255);
+  --color-white: #161414;
+  --color-black: #f7f7f7;
+  --color-grey0: #252525;
+  --color-grey-1: #171718;
+  --color-grey-2: #222425;
+  --color-grey-3: #a5abaf;
+  --color-grey-4: #ada3b4;
+  --color-grey-5: #a2a4a7;
+  --color-grey-6: #e0e2e2;
+  --color--scrollbar: rgb(162, 153, 218);
+  --color--about--icons--bg--hover: rgb(199, 100, 219);
+  --color--course-bg: rgb(76, 47, 109);
+  --color--course-hover: rgb(116, 209, 194);
+  --color--course-hover-info: rgb(154, 126, 185);
+  --color--course--hover--icon: rgb(155, 61, 153);
+  --color--course--info: #FFFFFF;
+  --color--projects--title: rgb(201, 116, 120);
+  --color--projects--bg: rgba(185, 90, 106, 0.6);
+  --color--projects--hover: rgb(157, 146, 218);
+  --color--projects--h4: rgb(115, 109, 148);
+  --color--contact--input: rgb(139, 133, 180);
+  --color--contact--ph: rgb(92, 87, 131);
+  --color--contact--title: rgb(95, 86, 223);
+  --color--contact--submit--hover: rgb(177, 171, 218);
 }
 
 body {
@@ -87,17 +131,13 @@ header {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #7da5c5;
+  background-color: var(--color--scrollbar);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track {
   border-radius: 5px;
-  background-color: #f1f1f1;
-}
-
-.active {
-  display: block;
+  background-color: var(--color-white);
 }
 
 .controls {
@@ -137,9 +177,9 @@ header {
   pointer-events: none;
 }
 
-.black-and-white-btn {
+.theme-btn {
   top: 7%;
-  right: 3.83%;
+  right: 3.81%;
   position: fixed;
   width: 35px;
   height: 35px;
@@ -152,7 +192,7 @@ header {
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease-in-out;
 }
-.black-and-white-btn:active {
+.theme-btn:active {
   transform: translateY(-2px);
 }
 
@@ -164,17 +204,6 @@ header {
 .not-upside-down {
   transform: rotate(0deg);
   transition: transform 1s ease-in-out;
-}
-
-.colored {
-  transition: all 0.5s ease-in-out;
-  filter: grayscale(0%) !important;
-  background-color: rgb(4, 255, 0);
-}
-.colored i {
-  filter: grayscale(0%) !important;
-  color: rgb(120, 82, 246);
-  transition: all 0.5s ease-in-out;
 }
 
 .black-and-white {
@@ -279,7 +308,7 @@ header {
   height: 0;
   border-left: 100px solid transparent;
   border-right: 100px solid transparent;
-  border-bottom: 173.1px solid purple;
+  border-bottom: 173.1px solid rgb(47, 78, 180);
   transform: rotateX(180deg);
 }
 
@@ -446,7 +475,7 @@ img-cont {
 }
 
 .github:hover i {
-  color: rgb(44, 42, 111);
+  color: var(--color--about--icons--bg--hover);
   transition: all 0.4s ease-in-out;
 }
 
@@ -470,7 +499,7 @@ img-cont {
 }
 
 .linkedin:hover i {
-  color: rgb(44, 42, 111);
+  color: var(--color--about--icons--bg--hover);
   transition: all 0.4s ease-in-out;
 }
 
@@ -487,16 +516,19 @@ img-cont {
   height: 150px;
 }
 .courses .course-unit .course-info {
-  background-color: rgb(137, 81, 135);
+  background-color: var(--color--course-bg);
   height: 100%;
   width: 100%;
   border-radius: 15px;
   padding: 1rem;
 }
+.courses .course-unit .course-info .course-code, .courses .course-unit .course-info .course-name {
+  color: var(--color--course--info);
+}
 .courses .course-unit .hover-items {
   width: 100%;
   height: 100%;
-  background-color: rgb(255, 251, 0);
+  background-color: var(--color--course-hover);
   position: absolute;
   left: 0;
   top: 0;
@@ -511,11 +543,11 @@ img-cont {
 }
 .courses .course-unit .hover-items h3 {
   font-size: 1.5rem;
-  color: rgb(109, 29, 106);
+  color: var(--color--course-hover-info);
 }
 .courses .course-unit .hover-items h5 {
   font-size: 1rem;
-  color: rgb(109, 29, 106);
+  color: var(--color--course-hover-info);
 }
 .courses .course-unit .hover-items .hover-info {
   position: relative;
@@ -536,14 +568,14 @@ img-cont {
 }
 .courses .course-unit .hover-items .icons .icon i {
   font-size: 3.5rem;
-  color: rgb(109, 29, 106);
+  color: var(--color--course-hover-info);
   margin: 0 1rem;
 }
 .courses .course-unit .hover-items .icons .icon:hover {
   transition: all 0.4s ease-in-out;
 }
 .courses .course-unit .hover-items .icons .icon:hover i {
-  color: rgb(161, 74, 159);
+  color: var(--color--course--hover--icon);
   transition: all 0.4s ease-in-out;
 }
 
@@ -561,7 +593,7 @@ img-cont {
   text-shadow: 2px 2px 4px var(--color-black);
 }
 .courses-text span {
-  color: rgb(255, 251, 0);
+  color: var(--color--course-hover);
 }
 
 .projects-text {
@@ -573,7 +605,7 @@ img-cont {
   text-shadow: 1px 1px 2px var(--color-grey-4);
 }
 .projects-text span {
-  color: rgb(120, 82, 246);
+  color: var(--color--projects--title);
 }
 
 .proj-p {
@@ -592,7 +624,7 @@ img-cont {
 }
 .projects .project-unit {
   position: relative;
-  background-color: rgba(33, 96, 84, 0.6);
+  background-color: var(--color--projects--bg);
   border-radius: 5px;
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
   transition: all 0.4s ease-in-out;
@@ -626,7 +658,7 @@ img-cont {
   cursor: pointer;
 }
 .projects .project-unit .proj-unit-text h4:hover {
-  color: rgb(97, 69, 255);
+  color: var(--color--projects--h4);
 }
 .projects .project-unit .proj-unit-text p {
   color: var(--color-white);
@@ -678,16 +710,16 @@ img-cont {
   padding: 0.8rem 1.1rem;
   outline: none;
   border: none;
-  background-color: rgb(15, 78, 122);
+  background-color: var(--color--contact--input);
   resize: none;
   width: 100%;
   color: var(--color-white);
 }
 .contact-content-con .right-contact .input-control input::-moz-placeholder, .contact-content-con .right-contact .input-control textarea::-moz-placeholder {
-  color: rgb(6, 98, 163);
+  color: var(--color--contact--ph);
 }
 .contact-content-con .right-contact .input-control input::placeholder, .contact-content-con .right-contact .input-control textarea::placeholder {
-  color: rgb(6, 98, 163);
+  color: var(--color--contact--ph);
 }
 .contact-content-con .right-contact .ic {
   display: flex;
@@ -705,12 +737,12 @@ img-cont {
   text-shadow: 2px 2px 4px var(--color-grey-4);
 }
 .contact-title span {
-  color: rgb(142, 40, 101);
+  color: var(--color--contact--title);
 }
 
 .submit-button {
-  background-color: #007bff;
-  color: #fff;
+  background-color: var(--color--contact--input);
+  color: var(--color--contact--ph);
   padding: 10px 20px;
   border: none;
   border-radius: 30px;
@@ -721,7 +753,7 @@ img-cont {
 
 /* Hover effect */
 .submit-button:hover {
-  background-color: #0056b3;
+  background-color: var(--color--contact--submit--hover);
 }
 
 /* Disable button when submitting */
