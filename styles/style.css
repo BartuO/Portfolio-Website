@@ -81,8 +81,6 @@ a {
 }
 
 section {
-  min-height: 100vh;
-  width: 100%;
   position: abosolute;
   left: 0;
   top: 0;
@@ -96,9 +94,8 @@ header {
 }
 
 .section {
-  transform: translateY(-100%) scale(0);
-  transition: all 0.4s ease-in-out;
-  background-color: var(--color-primary);
+  min-height: 120vh;
+  width: 100%;
 }
 
 .sec1 {
@@ -213,6 +210,8 @@ header {
 /*Header*/
 .header-content {
   display: grid;
+  position: relative;
+  top: -4.375rem;
   grid-template-columns: repeat(2, 1fr);
   height: 100%;
 }
@@ -426,7 +425,7 @@ header {
 
 .about-con {
   position: absolute;
-  left: 5%;
+  left: 10%;
   top: 25%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -442,6 +441,9 @@ header {
 }
 
 .about-p {
+  position: relative;
+  top: 10px;
+  font-size: 1rem;
   padding-right: 3rem;
   text-align: justify;
 }
@@ -452,12 +454,12 @@ img-cont {
 }
 
 .starry-night {
-  height: 500px;
-  width: 575px;
+  height: 440px;
+  width: 515px;
   margin-right: 2rem;
   border: 6px solid var(--color-secondary); /* Border color and width */
   border-radius: 8px; /* Border radius for rounded corners */
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+  box-shadow: 0 6px 10px rgba(133, 131, 131, 0.7); /* Shadow effect */
 }
 
 .abt-btns {
@@ -520,6 +522,7 @@ img-cont {
   border-radius: 15px;
   width: 100%;
   height: 150px;
+  box-shadow: 1px 4px 20px rgba(107, 99, 99, 0.8);
 }
 .courses .course-unit .course-info {
   background-color: var(--color--course-bg);
@@ -768,36 +771,12 @@ img-cont {
   cursor: not-allowed;
 }
 
-@media screen and (max-width: 600px) {
-  header {
-    padding: 0;
-  }
-  header .right-header {
-    padding: 2rem !important;
-  }
-  .controls {
-    top: auto;
-    bottom: 0;
-    flex-direction: row;
-    justify-content: center;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    background-color: var(--color-grey-5);
-    width: 100%;
-  }
-  .controls .control {
-    margin: 1rem 2.4rem;
-  }
-  .theme-btn {
-    top: auto;
-    bottom: 0;
-  }
-  .header-content {
+@media screen and (max-width: 1376px) {
+  .about-con {
+    position: absolute;
+    left: 2%;
     display: grid;
-    grid-template-columns: 1fr;
-  }
-  .big_triangle {
-    position: static;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-flow: row;
   }
 }/*# sourceMappingURL=style.css.map */
