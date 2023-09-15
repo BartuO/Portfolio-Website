@@ -146,6 +146,15 @@ function rotateUpsideDown() {
 
   }
 
+function schoolProjectPopUp(){
+    const h4s = document.querySelectorAll(".school-project");
+    h4s.forEach(h4 => {
+        h4.addEventListener("click", () => {
+            window.alert("This project is one of my school projects. Therefore, it doesn't have a public repository. Feel free to contact me to request more information, discuss the project in detail, or inquire about specific aspects you'd like to explore further.")
+        })
+    })
+}
+
 
 
   
@@ -158,3 +167,4 @@ triangleHover();
 triangleCycle();
 pageTransitions();
 navButtons();
+schoolProjectPopUp();
