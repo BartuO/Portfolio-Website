@@ -91,7 +91,7 @@ let colorIndex = 0;
 
 async function triangleCycle(){
     while (true){
-        await new Promise((resolve) => setTimeout(resolve, 2000));
+        await new Promise((resolve) => setTimeout(resolve, 500));
         triangles[triangleIndex].style.borderBottomColor = colorCodes[colorIndex];
         colorIndex++;
         triangleIndex++;
