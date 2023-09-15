@@ -551,14 +551,16 @@ img-cont {
   transition: all 0.4s ease-in-out;
 }
 .courses .course-unit .hover-items h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: var(--color--course-hover-info);
 }
 .courses .course-unit .hover-items h5 {
-  font-size: 1rem;
+  font-size: 0.75rem;
   color: var(--color--course-hover-info);
 }
 .courses .course-unit .hover-items .hover-info {
+  width: 80%;
+  height: 50%;
   position: relative;
   bottom: 20%;
 }
