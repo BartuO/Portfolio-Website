@@ -1,14 +1,287 @@
-@media screen and (max-width: 1376px){
+@media screen and (max-width: 1330px){
+    .contact-content-con{
+        display:flex;
+        flex-wrap: wrap;
+        padding-top: 3.5rem;
+        .left-contact{
+            flex: 0 0 100%;
+            h4{
+                margin-top: 1.5rem;
+                line-height: 2rem;
+            }
+    
+           
+                .contact-item{
+                    display:flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 20px;
+                    p{
+                        margin: .2rem 0 !important;
+                        padding: 0 !important;
+                    }
+    
+                    .icon{
+                        display:grid;
+                        grid-template-columns: 40px 1fr;
+                        i{
+                            display:flex;
+                            align-items: center;
+                            font-size: 1.3rem;
+                        }
+                    }
+    
+                }
+            
+        }
+
+    }
+
+    .course-code, .course-name{
+        font-size: 1rem;
+    }
+
+    .courses{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .projects{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sec2{
+        height: 140vh;
+    }
+}
+
+
+@media screen and (max-width: 1132px){
+    .sec2{
+        height: 205vh;
+    }
     .about-con{
+ 
         position: absolute;
         left: 2%;
-
+        right: 5%;
+        top: 25%;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-auto-flow: row;
+        grid-row-gap: 85px;
+    }
+    
+    .about-right{
+        display:flex;
+        grid-column: 1/2;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .about-left{
+
+        grid-column: 1/2;
+
+    }
+
+    .starry-night {
+        margin-right: 0px;
+        height: 440px;
+        width: 600px;
     }
     
 
+    .projects{
+        grid-template-columns: 1fr;
+    }
+
+    
+
+    .header-content{
+        display: grid;
+        position: relative;
+        top: -4.375rem;
+        grid-template-columns: 1fr 1fr;
+        height: 100%;
+        .left-header{
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .right-header{
+            right: 55px;
+        }
+    
+    }
+
+    .intro{
+        font-size: 1.3rem;
+    }
+
+    .intro-2{
+        font-size: 1rem;
+    }
+
+    /* .big-triangle */
+.big-triangle {
+    position: relative;
+    left: 42.5px; /* Adjusted position */
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent; /* Reduced by 50% */
+    border-right: 150px solid transparent; /* Reduced by 50% */
+    border-bottom: 259.8px solid transparent; /* Reduced by 50% */
+  }
+  
+  /* .big-triangle::before */
+  .big-triangle::before {
+    content: "";
+    position: absolute;
+    top: 15px; /* Adjusted offset */
+    left: -125px; /* Adjusted offset */
+    width: 0;
+    height: 0;
+    border-left: 156px solid transparent; /* Slightly wider than the triangle, reduced by 50% */
+    border-right: 156px solid transparent; /* Slightly wider than the triangle, reduced by 50% */
+    border-bottom: 265.3px solid rgba(0, 0, 0, 0.2); /* Adjusted size and color */
+  }
+  
+  /* .triangle-1 */
+  .triangle-1 {
+    position: absolute;
+    left: -50px; /* Adjusted position */
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; /* Reduced by 50% */
+    border-right: 50px solid transparent; /* Reduced by 50% */
+    border-bottom: 86.6px solid lightblue; /* Reduced by 50%, keep the color */
+  }
+  
+  /* .triangle-2 */
+  .triangle-2 {
+    position: absolute;
+    left: -100px; /* Adjusted position */
+    top: 86.6px; /* Adjusted position */
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; /* Reduced by 50% */
+    border-right: 50px solid transparent; /* Reduced by 50% */
+    border-bottom: 86.6px solid lightsalmon; /* Reduced by 50%, keep the color */
+  }
+  
+  /* .triangle-3 */
+  .triangle-3 {
+    position: absolute;
+    left: -50px; /* Adjusted position */
+    top: 86.6px; /* Adjusted position */
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; /* Reduced by 50% */
+    border-right: 50px solid transparent; /* Reduced by 50% */
+    border-bottom: 86.6px solid green; /* Reduced by 50%, keep the color */
+    transform: rotateX(180deg);
+  }
+  
+  /* .triangle-4 */
+  .triangle-4 {
+    position: absolute;
+    left: 0; /* Adjusted position */
+    top: 86.6px; /* Adjusted position */
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; /* Reduced by 50% */
+    border-right: 50px solid transparent; /* Reduced by 50% */
+    border-bottom: 86.6px solid blue; /* Reduced by 50%, keep the color */
+  }
+  
+  /* .triangle-5 */
+  .triangle-5 {
+    position: absolute;
+    left: -150px; /* Adjusted position */
+    top: 173.1px; /* Adjusted position */
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; /* Reduced by 50% */
+    border-right: 50px solid transparent; /* Reduced by 50% */
+    border-bottom: 86.6px solid pink; /* Reduced by 50%, keep the color */
+  }
+  
+  /* .triangle-6 */
+  .triangle-6 {
+    position: absolute;
+    left: -100px; /* Adjusted position */
+    top: 173.1px; /* Adjusted position */
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; /* Reduced by 50% */
+    border-right: 50px solid transparent; /* Reduced by 50% */
+    border-bottom: 86.6px solid rgb(47, 78, 180); /* Reduced by 50%, keep the color */
+    transform: rotateX(180deg);
+  }
+  
+  /* .triangle-7 */
+  .triangle-7 {
+    position: absolute;
+    left: -50px; /* Adjusted position */
+    top: 173.1px; /* Adjusted position */
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; /* Reduced by 50% */
+    border-right: 50px solid transparent; /* Reduced by 50% */
+    border-bottom: 86.6px solid white; /* Reduced by 50%, keep the color */
+  }
+  
+  /* .triangle-8 */
+  .triangle-8 {
+    position: absolute;
+    left: 0; /* Adjusted position */
+    top: 173.1px; /* Adjusted position */
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; /* Reduced by 50% */
+    border-right: 50px solid transparent; /* Reduced by 50% */
+    border-bottom: 86.6px solid brown; /* Reduced by 50%, keep the color */
+    transform: rotateX(180deg);
+  }
+  
+  /* .triangle-9 */
+  .triangle-9 {
+    position: absolute;
+    left: 50px; /* Adjusted position */
+    top: 173.1px; /* Adjusted position */
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent; /* Reduced by 50% */
+    border-right: 50px solid transparent; /* Reduced by 50% */
+    border-bottom: 86.6px solid grey; /* Reduced by 50%, keep the color */
+  }
+  
+
+
 }
+
+
+@media screen and (max-width: 880px){
+
+    .sec2{
+        height: 250vh;
+    }
+
+    .big-triangle{
+        left: 15px;
+    }
+
+    .right-header{
+        right: 12%;
+    }
+   
+    .project-unit{
+        width: 300px;
+    }
+
+
+}
+
+
 
 
