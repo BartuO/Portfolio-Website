@@ -813,6 +813,9 @@ img-cont {
     align-items: center;
     font-size: 1.3rem;
   }
+  .contact-content-con .right-contact {
+    margin-left: 0px;
+  }
   .course-code, .course-name {
     font-size: 1rem;
   }
@@ -1023,9 +1026,6 @@ img-cont {
   }
   .header-content .right-header {
     right: 64px;
-  }
-  .project-unit {
-    width: 300px;
   }
 }
 @media screen and (max-width: 700px) {
