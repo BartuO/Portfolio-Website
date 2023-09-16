@@ -85,10 +85,10 @@ a{
 
 section{
 
-    position: abosolute;
+
     left: 0;
     top: 0;
-    padding: 3rem 18rem;
+    padding: 3rem 12rem;
 
 }
 
@@ -559,13 +559,18 @@ img-cont{
     }
 }
 
-
+.course-content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .courses{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
     margin-top: 3rem;
+    justify-content: center;
     .course-unit{
         position: relative;
         border-radius: 15px;
@@ -750,6 +755,7 @@ img-cont{
 .contact-content-con{
     display:flex;
     padding-top: 3.5rem;
+    justify-content: center;
     .left-contact{
         flex: 2;
         h4{
